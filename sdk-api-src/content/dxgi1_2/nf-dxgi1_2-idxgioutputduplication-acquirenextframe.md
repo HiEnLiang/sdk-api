@@ -84,7 +84,11 @@ A pointer to a variable that receives the <a href="/windows/desktop/api/dxgi/nn-
 <li>E_INVALIDARG if one of the parameters to <b>AcquireNextFrame</b> is incorrect; for example, if <i>pFrameInfo</i> is NULL.</li>
 <li>Possibly other error codes that are described in the <a href="/windows/desktop/direct3ddxgi/dxgi-error">DXGI_ERROR</a> topic.</li>
 </ul>
-
+Hi Microsoft team，
+    When I use this , some problems bother me, and I would like to ask for advice. 
+1) If the refresh rate of the display is set to 60, does the system forcibly refresh the screen every 16.7ms, and will the capture operation follow the refresh? If not, what is the logic of refresh and capture?
+2) When I used the demo to test capture, I found that acquireNextFrameo occasionally took more than 30ms. This caused performance jitter. What could be the reason for this? What factors affect the jitter of acquireNextFrame? Check the CPU, memory,  and other loads through the task manager are very low.
+Thanks
 ## -remarks
 
 When <b>AcquireNextFrame</b> returns successfully, the calling application can access the desktop image that <b>AcquireNextFrame</b> returns in the variable at <i>ppDesktopResource</i>.
